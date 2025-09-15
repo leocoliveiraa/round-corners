@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arredondar Imagens</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-content">
+        <div class="nav-logo">round corners</div>
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="hero">
+        <p>uma ferramenta simples para arredondar suas imagens</p>
+        <p class="hero-subtitle">comece fazendo upload de uma imagem abaixo</p>
+      </div>
+
+      <section class="upload-section">
+        <div
+          class="upload-area"
+          onclick="document.getElementById('upload').click()"
+        >
+          <div class="upload-content">
+            <div class="upload-icon">📁</div>
+            <span class="upload-text">clique aqui ou arraste sua imagem</span>
+            <span class="upload-subtext"
+              >selecione qualquer imagem do seu dispositivo para começar a
+              arredondar os cantos</span
+            >
+            <span class="upload-formats">png • jpg • jpeg • gif • webp</span>
+          </div>
+          <input type="file" id="upload" accept="image/*" />
+        </div>
+      </section>
+
+      <section class="controls-section" id="controls">
+        <div class="control-group">
+          <label for="radius">raio</label>
+          <div class="slider-group">
+            <input type="range" id="radius" min="0" max="200" value="50" />
+            <span class="value"><span id="radiusValue">50</span>px</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="preview-section" id="previewContainer">
+        <div class="canvas-wrapper">
+          <canvas id="canvas"></canvas>
+        </div>
+      </section>
+
+      <section class="download-section">
+        <button id="download" class="download-btn">baixar imagem</button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <p>
+          feito por
+          <a
+            href="https://leocoliveira.vercel.app"
+            target="_blank"
+            rel="noopener"
+            >léo</a
+          >
+        </p>
+        <p class="copyright">© 2025 todos os direitos reservados</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
